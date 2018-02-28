@@ -1,0 +1,13 @@
+<div>
+  <label>Enter your name:</label>
+  <input type="text" #newName>
+  <button (click)="submitForm(newName.value); newName.value=''">Start</button>
+</div>
+<div>
+  <ul class="list-group">
+    <li *ngFor="let player of players | async" (click)="goToDetailPage(player)" class="list-group-item d-flex justify-content-between align-items-center">
+      {{player.name}} {{player.$key}}
+      <span class="badge badge-primary badge-pill">{{player.score}}</span>
+    </li>
+</ul>
+</div>

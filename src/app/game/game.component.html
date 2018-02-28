@@ -1,0 +1,11 @@
+<div *ngFor="let game of games | async" class="panel panel-default">
+  <div class="panel-body">
+    <p>{{game.question}} : {{game.answerKey}} </p>
+    <div class="radio" id="answer-form">
+      <label><input [(ngModel)]="result" type="radio" name="{{game.question}}" ng-value="0" (click)="selectAnswer(0, game)">{{game.answer[0]}}</label>
+      <label><input [(ngModel)]="result" type="radio" name="{{game.question}}" ng-value="1" (click)="selectAnswer(1, game)">{{game.answer[1]}}</label>
+      <label><input [(ngModel)]="result" type="radio" name="{{game.question}}" ng-value="2" (click)="selectAnswer(2, game)">{{game.answer[2]}}</label>
+      <label><input [(ngModel)]="result" type="radio" name="{{game.question}}" ng-value="3" (click)="selectAnswer(3, game)">{{game.answer[3]}}</label>
+    </div>
+  </div>
+</div>
