@@ -8,6 +8,7 @@
 
 # dependencies
 /node_modules
+/bower_components
 
 # IDEs and editors
 /.idea
@@ -43,4 +44,4 @@ testem.log
 Thumbs.db
 
 #Firebase credentials
-/src/app/api-keys.ts 
+/src/app/api-keys.ts
